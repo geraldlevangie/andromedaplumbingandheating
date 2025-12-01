@@ -43,6 +43,13 @@ header {
 
 .nav {
   display: flex;
+   .service-card img {
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+  width: 100%;
+  height: auto;
+}
+
   align-items: center;
   justify-content: space-between;
   padding: 0.6rem 0;
