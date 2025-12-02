@@ -16,10 +16,10 @@
    Triggered when <body class="dark-mode">
    ============================================================ */
 body.dark-mode {
-    --bg: #000000;
-    --bg-panel: #0e0e0e;
-    --text-main: #f1f1f1;
-    --text-soft: #bbbbbb;
+    --bg: #050505;
+    --bg-panel: #101010;
+    --text-main: #f3f3f3;
+    --text-soft: #b3b3b3;
     --accent: #04B97F;
     --accent-soft: #39dba0;
     --border: #1a1a1a;
@@ -34,7 +34,7 @@ body {
     background: var(--bg);
     font-family: system-ui, Arial, sans-serif;
     color: var(--text-main);
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 a {
@@ -46,141 +46,274 @@ a:hover {
     color: var(--accent-soft);
 }
 
+/* Utility container (if you ever need it) */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
 /* ============================================================
    HEADER + NAVIGATION
    ============================================================ */
 header {
     width: 100%;
     background: var(--bg);
-    padding: 16px 40px;
+    padding: 14px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
 }
 
+/* Left side: logo + brand text */
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
 .nav-left img {
-    height: 48px;
+    height: 52px;
     width: auto;
 }
 
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-text span:first-child {
+    font-size: 1.0rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.brand-text span:last-child {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* Center: nav links + toggle */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+}
+
 .nav-links a {
-    margin-left: 22px;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    border-bottom: 2px solid var(--accent);
     color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* Right: phone info */
+.nav-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.nav-phone a {
+    color: var(--accent-soft);
+    font-weight: 700;
+}
+
+.call-text {
+    font-size: 0.8rem;
+    color: var(--text-soft);
 }
 
 /* ============================================================
-   TOGGLE SWITCH
+   THEME TOGGLE
    ============================================================ */
+
 .toggle-wrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    margin-left: 12px;
+}
+
+.toggle-label {
+    font-size: 0.8rem;
+    color: var(--text-soft);
 }
 
 .theme-toggle {
-    width: 45px;
+    width: 44px;
     height: 22px;
     background: var(--border);
-    border-radius: 50px;
+    border-radius: 999px;
     position: relative;
     cursor: pointer;
-    transition: background 0.3s ease;
+    border: none;
+    padding: 0;
+    outline: none;
 }
 
 .theme-toggle::after {
     content: "";
     width: 18px;
     height: 18px;
-    background: var(--accent);
     border-radius: 50%;
+    background: var(--accent);
     position: absolute;
     top: 2px;
     left: 2px;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
 }
 
+/* Knob position in dark mode */
 body.dark-mode .theme-toggle::after {
-    transform: translateX(23px);
+    transform: translateX(22px);
 }
 
 /* ============================================================
    HERO SECTION
    ============================================================ */
+
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 60px 7%;
+    gap: 40px;
 }
 
 .hero-left {
     max-width: 480px;
 }
 
+.service-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+}
+
 .call-buttons {
     display: flex;
     gap: 10px;
-    margin: 20px 0;
+    margin: 16px 0;
 }
 
 .call-buttons a {
     padding: 10px 18px;
     border-radius: 6px;
     border: 2px solid var(--accent);
-    color: var(--accent);
     font-weight: 600;
     transition: 0.2s;
 }
 
-.call-buttons a:hover {
+/* Primary: Call Now */
+.call-now {
     background: var(--accent);
-    color: black;
+    color: #000;
 }
 
-/* Emergency Box */
+.call-now:hover {
+    background: var(--accent-soft);
+}
+
+/* Secondary: Quote button */
+.quote {
+    background: transparent;
+    color: var(--accent);
+}
+
+.quote:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* Emergency box */
+.hero-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
 .emergency-box {
     background: var(--bg-panel);
-    padding: 22px;
     border-radius: 12px;
+    padding: 22px;
     border: 1px solid var(--border);
-    width: 320px;
-    color: var(--text-soft);
+    max-width: 320px;
+    box-shadow: 0 0 14px rgba(4, 185, 127, 0.15);
 }
 
 .emergency-box h3 {
     margin-top: 0;
-    color: var(--text-main);
+}
+
+.emergency-box ul {
+    padding-left: 18px;
+    margin: 10px 0;
+}
+
+.emergency-box li {
+    margin-bottom: 4px;
+}
+
+.emergency-call {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.location-tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--text-soft);
+    font-size: 0.78rem;
 }
 
 /* ============================================================
    SERVICES SECTION
    ============================================================ */
+
 .services {
-    padding: 70px 7%;
+    padding: 60px 7% 70px;
     text-align: center;
 }
 
+.services h2 {
+    margin-bottom: 6px;
+}
+
+.services p {
+    color: var(--text-soft);
+    max-width: 580px;
+    margin: 0 auto;
+}
+
 .service-grid {
-    margin-top: 40px;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 22px;
@@ -188,69 +321,168 @@ body.dark-mode .theme-toggle::after {
 
 .service-card {
     background: var(--bg-panel);
+    border-radius: 14px;
     border: 1px solid var(--border);
     padding: 20px;
-    border-radius: 14px;
+    text-align: left;
     transition: 0.2s ease;
+}
+
+.service-card h4 {
+    margin-top: 0;
+}
+
+.service-card p {
+    color: var(--text-soft);
 }
 
 .service-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 12px rgba(4, 185, 127, 0.3);
+    box-shadow: 0 0 14px rgba(4, 185, 127, 0.25);
+}
+
+/* ============================================================
+   ABOUT & CONTACT CONTENT
+   ============================================================ */
+
+.page-section {
+    padding: 60px 7%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-section p {
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.list-check {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-check li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.list-check li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-size: 0.85rem;
 }
 
 /* ============================================================
    GALLERY
    ============================================================ */
+
+.gallery-section {
+    padding: 50px 7% 80px;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-    padding: 40px 7%;
+    gap: 18px;
 }
 
-.gallery-grid img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 12px;
+.gallery-item {
+    background: var(--bg-panel);
+    border-radius: 14px;
+    padding: 12px;
     border: 1px solid var(--border);
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
-.gallery-grid img:hover {
+.gallery-item img {
+    width: 100%;
+    max-height: 230px;  /* keep them from being huge */
+    object-fit: cover;  /* crop nicely */
+    border-radius: 10px;
+    display: block;
+}
+
+.gallery-item h3 {
+    margin: 10px 0 4px;
+}
+
+.gallery-item p {
+    color: var(--text-soft);
+    font-size: 0.9rem;
+}
+
+.gallery-item:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 14px rgba(4,185,127,0.35);
+    box-shadow: 0 0 14px rgba(4,185,127,0.3);
 }
 
 /* ============================================================
    FOOTER
    ============================================================ */
-footer {
-    padding: 40px;
+
+.site-footer {
+    margin-top: 40px;
+    padding: 26px 40px 30px;
     background: var(--bg-panel);
-    color: var(--text-soft);
     border-top: 1px solid var(--border);
     text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-soft);
 }
 
-footer strong {
+.site-footer strong {
     color: var(--text-main);
 }
 
 /* ============================================================
-   MOBILE FIXES
+   RESPONSIVE
    ============================================================ */
-@media (max-width: 768px) {
+
+@media (max-width: 850px) {
     header {
         flex-direction: column;
-        gap: 14px;
-        padding: 20px;
+        gap: 8px;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .nav-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .nav-contact {
+        align-items: center;
     }
 
     .hero {
         flex-direction: column;
+        padding: 40px 7%;
         text-align: center;
-        gap: 30px;
+    }
+
+    .hero-right {
+        justify-content: center;
+    }
+
+    .services {
+        padding: 40px 7% 60px;
+    }
+
+    .gallery-section {
+        padding: 40px 7% 60px;
+    }
+
+    .page-section {
+        padding: 40px 7%;
     }
 }
