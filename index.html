@@ -1,245 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Andromeda Plumbing and Heating | Edmonton, AB</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Andromeda Plumbing and Heating provides fast, professional plumbing and heating services in Edmonton, AB. 24/7 emergency service for leaks, clogs, no-heat calls and hot water tanks."
-  />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andromeda Plumbing & Heating</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Site Header -->
-  <header class="site-header">
-    <div class="container nav-row">
-      <div class="nav-left">
-        <a href="index.html" class="brand">
-          <img
-            src="assets/Andromeda 1 Logo.png"
-            alt="Andromeda Plumbing and Heating logo"
-            class="brand-logo"
-          />
-          <div class="brand-text">
-            <span>ANDROMEDA</span>
-            <span>PLUMBING &amp; HEATING</span>
-          </div>
-        </a>
-      </div>
-
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-right">
-        <button
-          id="themeToggle"
-          class="theme-toggle"
-          type="button"
-          aria-label="Toggle dark mode"
-        >
-          🌙
-        </button>
-        <div class="nav-contact">
-          <a href="tel:+17808879775" class="nav-phone">780-887-9775</a>
-          <a href="tel:+17808879775" class="nav-cta">Call Now</a>
-          <span class="nav-location">Edmonton, AB</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <!-- Left side: BIG LOGO replacing “Reliable Plumbing & Heating” text -->
-      <div class="hero-left">
-        <div class="hero-logo-wrap">
-          <img
-            src="assets/Andromeda 1 Logo.png"
-            alt="Andromeda Plumbing and Heating"
-            class="hero-logo"
-          />
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="assets/Andromeda Logo 1.png" class="nav-logo" alt="Andromeda Logo">
+            <div class="brand-text">
+                <span>ANDROMEDA</span>
+                <span>PLUMBING & HEATING</span>
+            </div>
         </div>
 
-        <p class="hero-sub">
-          Fast, professional service for leaks, clogs, heating issues, hot water
-          tanks, and full system installs.
-        </p>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-        <div class="hero-actions">
-          <a href="tel:+17808879775" class="btn btn-primary">Call Now</a>
-          <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+        <div class="nav-right">
+            <span class="nav-phone">780-887-9775</span>
+            <a href="tel:7808879775" class="nav-cta">Call Now</a>
+            <label class="toggle">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="assets/Andromeda Logo 1.png" class="hero-logo" alt="Andromeda Logo">
+
+        <p class="service-note">24/7 Emergency Service — Licensed & Insured — Serving Edmonton, AB</p>
+
+        <div class="call-buttons">
+            <a href="tel:7808879775" class="call-now">Call Now</a>
+            <a href="contact.html" class="quote">Get a Quote</a>
         </div>
 
-        <div class="hero-meta">
-          <span><strong>24/7 Emergency Service</strong></span>
-          <span>Licensed &amp; Insured</span>
-          <span>Serving Edmonton, AB</span>
-        </div>
-      </div>
-
-      <!-- Right side: Emergency card -->
-      <aside class="hero-right">
         <div class="emergency-box">
-          <h3>Emergency Services</h3>
-          <p class="emergency-text">
-            Immediate help for leaks, no-heat calls, clogged drains, and hot
-            water tank failures.
-          </p>
-          <ul class="emergency-list">
-            <li>Burst Pipes</li>
-            <li>Frozen Lines</li>
-            <li>No Heat</li>
-            <li>Flooding</li>
-          </ul>
-          <p class="emergency-call">
-            Call <strong>780-887-9775</strong> for fast response.
-          </p>
-          <span class="location-tag">Edmonton, AB</span>
+            <h3>Emergency Services</h3>
+            <ul>
+                <li>Burst Pipes</li>
+                <li>Frozen Lines</li>
+                <li>No Heat</li>
+                <li>Flooding</li>
+            </ul>
+            <p>Call 780-887-9775 for fast response.</p>
+            <span class="location-tag">Edmonton, AB</span>
         </div>
-      </aside>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES -->
-  <section class="section services-section">
-    <div class="container">
-      <header class="section-header">
-        <div class="section-kicker">Services</div>
-        <h2 class="section-title">Professional Plumbing &amp; Heating</h2>
-        <p class="section-sub">
-          Honest work. Clean installations. Code-compliant repairs.
-        </p>
-      </header>
+    <section class="services">
+        <h2>Professional Plumbing & Heating</h2>
+        <p>Honest work. Clean installations. Code-compliant repairs.</p>
 
-      <div class="services-grid">
-        <article class="service-card">
-          <h4>Leaks, Clogs &amp; Fixes</h4>
-          <p>
-            Dripping faucets, blocked drains, running toilets, water pressure
-            issues, and more.
-          </p>
-          <div class="pill-row">
-            <span>Drain Cleaning</span>
-            <span>Leak Repair</span>
-          </div>
-        </article>
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Leaks, Clogs & Fixes</h4>
+                <p>Faucets, blocked drains, toilets, pressure issues, and more.</p>
+            </div>
 
-        <article class="service-card">
-          <h4>Furnace &amp; Heating Systems</h4>
-          <p>
-            Repairs, diagnostics, and installs for home heating systems to keep
-            your space warm and safe.
-          </p>
-          <div class="pill-row">
-            <span>No Heat</span>
-            <span>Diagnostics</span>
-          </div>
-        </article>
+            <div class="service-card">
+                <h4>Furnace & Heating Systems</h4>
+                <p>Repairs, diagnostics, and installs for all heating systems.</p>
+            </div>
 
-        <article class="service-card">
-          <h4>Hot Water Tanks</h4>
-          <p>
-            Emergency replacements and upgrades for all tank sizes so you are
-            never without hot water.
-          </p>
-          <div class="pill-row">
-            <span>Tank Replacement</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+            <div class="service-card">
+                <h4>Hot Water Tanks</h4>
+                <p>Emergency replacements and upgrades for all tank sizes.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="section alt">
-    <div class="container columns">
-      <div class="card">
-        <h2>Work Done Right</h2>
-        <ul class="list-check">
-          <li>Clear explanations and honest recommendations</li>
-          <li>Fair pricing with no surprises</li>
-          <li>Work completed to local code</li>
-          <li>Respectful service from start to finish</li>
-        </ul>
-      </div>
+    <script>
+        const toggle = document.getElementById("modeToggle");
+        toggle.addEventListener("change", () => {
+            document.body.classList.toggle("dark");
+        });
+    </script>
 
-      <div class="card">
-        <h3>Serving Edmonton &amp; Area</h3>
-        <p>
-          Reliable plumbing and heating for Edmonton, Alberta and surrounding
-          communities.
-        </p>
-        <ul class="list-check">
-          <li>Homes and Condos</li>
-          <li>Small Commercial Sites</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-main">
-        <strong>Andromeda Plumbing and Heating</strong>
-        <span>Professional plumbing &amp; heating services in Edmonton, AB.</span>
-      </div>
-
-      <div class="footer-meta">
-        <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating</span>
-        <span>Edmonton, Alberta</span>
-        <span>
-          <a href="mailto:AndromedaPlumbingAndHeating@gmail.com">
-            AndromedaPlumbingAndHeating@gmail.com
-          </a>
-        </span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Dark mode + year script -->
-  <script>
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const root = document.documentElement;
-    const toggle = document.getElementById("themeToggle");
-    const storedTheme = localStorage.getItem("theme");
-
-    function applyTheme(theme) {
-      if (theme === "dark") {
-        root.setAttribute("data-theme", "dark");
-        toggle.textContent = "☀️";
-        toggle.setAttribute("aria-label", "Switch to light mode");
-      } else {
-        root.setAttribute("data-theme", "light");
-        toggle.textContent = "🌙";
-        toggle.setAttribute("aria-label", "Switch to dark mode");
-      }
-    }
-
-    // Initial theme: stored value or system preference
-    if (storedTheme === "dark" || storedTheme === "light") {
-      applyTheme(storedTheme);
-    } else if (window.matchMedia &&
-               window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      applyTheme("dark");
-    } else {
-      applyTheme("light");
-    }
-
-    toggle.addEventListener("click", () => {
-      const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
-      const next = current === "dark" ? "light" : "dark";
-      localStorage.setItem("theme", next);
-      applyTheme(next);
-    });
-  </script>
 </body>
 </html>
