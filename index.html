@@ -8,9 +8,10 @@
 </head>
 
 <body>
+    <!-- NAVIGATION BAR -->
     <header class="navbar">
         <div class="nav-left">
-            <img src="assets/Andromeda Logo 1.png" class="nav-logo" alt="Andromeda Logo">
+            <img src="assets/AndromedaLogo1.png" class="nav-logo" alt="Andromeda Logo">
             <div class="brand-text">
                 <span>ANDROMEDA</span>
                 <span>PLUMBING & HEATING</span>
@@ -27,6 +28,8 @@
         <div class="nav-right">
             <span class="nav-phone">780-887-9775</span>
             <a href="tel:7808879775" class="nav-cta">Call Now</a>
+
+            <!-- DARK MODE TOGGLE -->
             <label class="toggle">
                 <input type="checkbox" id="modeToggle">
                 <span class="slider"></span>
@@ -34,10 +37,13 @@
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section class="hero">
-        <img src="assets/Andromeda Logo 1.png" class="hero-logo" alt="Andromeda Logo">
+        <img src="assets/AndromedaLogo1.png" class="hero-logo" alt="Andromeda Logo">
 
-        <p class="service-note">24/7 Emergency Service — Licensed & Insured — Serving Edmonton, AB</p>
+        <p class="service-note">
+            24/7 Emergency Service — Licensed & Insured — Serving Edmonton, AB
+        </p>
 
         <div class="call-buttons">
             <a href="tel:7808879775" class="call-now">Call Now</a>
@@ -57,11 +63,13 @@
         </div>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section class="services">
         <h2>Professional Plumbing & Heating</h2>
         <p>Honest work. Clean installations. Code-compliant repairs.</p>
 
         <div class="service-grid">
+
             <div class="service-card">
                 <h4>Leaks, Clogs & Fixes</h4>
                 <p>Faucets, blocked drains, toilets, pressure issues, and more.</p>
@@ -76,9 +84,11 @@
                 <h4>Hot Water Tanks</h4>
                 <p>Emergency replacements and upgrades for all tank sizes.</p>
             </div>
+
         </div>
     </section>
 
+    <!-- DARK MODE SCRIPT -->
     <script>
         const toggle = document.getElementById("modeToggle");
         toggle.addEventListener("change", () => {
