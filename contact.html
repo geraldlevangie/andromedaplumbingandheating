@@ -2,90 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>Contact - Andromeda Plumbing &amp; Heating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-mode">
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="nav-left">
+        <div class="nav-brand">
+          <strong>ANDROMEDA</strong>
+          <span>PLUMBING &amp; HEATING</span>
+        </div>
+      </div>
 
-<header class="site-header">
-  <div class="container header-inner">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
 
-    <nav class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-
-    <div class="logo-center">
-      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" />
-      <div class="brand-text">
-        <span>ANDROMEDA</span>
-        <span>PLUMBING &amp; HEATING</span>
+      <div class="nav-right">
+        <div class="nav-phone">
+          <a href="tel:7808879775">780-887-9775</a>
+        </div>
+        <div class="nav-location">Edmonton, AB</div>
       </div>
     </div>
+  </header>
 
-    <div class="header-right">
-      <div class="header-phone">
-        <a href="tel:7808879775">780-887-9775</a>
-        <span>Edmonton & Area • 24/7</span>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>
+          For service calls, quotes, or general questions, use the form below or call
+          <a href="tel:7808879775">780-887-9775</a>.
+        </p>
       </div>
-      <div class="toggle-wrapper">
-        <span>Light / Dark</span>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <article class="contact-card">
+          <h2>Request Service or a Quote</h2>
+          <p>Please include your location, the type of issue, and any photos if possible.</p>
+
+          <!-- This form doesn't actually send anywhere yet (no backend). -->
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Your name" />
+            </div>
+
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" name="phone" placeholder="Best number to reach you" />
+            </div>
+
+            <div>
+              <label for="email">Email (optional)</label>
+              <input id="email" type="email" name="email" placeholder="you@example.com" />
+            </div>
+
+            <div>
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" placeholder="Describe the issue or project."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit (demo only)</button>
+          </form>
+        </article>
+
+        <article class="contact-card">
+          <h2>Service Details</h2>
+          <p><strong>Phone:</strong> <a href="tel:7808879775">780-887-9775</a></p>
+          <p><strong>Location:</strong> Edmonton, Alberta</p>
+          <p><strong>Hours:</strong> Regular appointments plus 24/7 emergency support.</p>
+          <ul class="list-check">
+            <li>Emergency leaks, no-heat calls, and flooding.</li>
+            <li>Plumbing repairs and fixture replacements.</li>
+            <li>Furnace and heating system diagnostics.</li>
+            <li>Hot water tank replacement and upgrades.</li>
+          </ul>
+        </article>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Andromeda Plumbing &amp; Heating. All rights reserved.</div>
+      <div>Serving Edmonton, Alberta &amp; surrounding area.</div>
     </div>
-
-  </div>
-</header>
-
-<main>
-  <section class="page-section">
-    <div class="container">
-      <div class="content">
-        <p>For service calls, quotes, or general questions:</p>
-
-        <ul class="list-check">
-          <li><strong>Phone:</strong> <a href="tel:7808879775">780-887-9775</a></li>
-          <li><strong>Email:</strong> <a href="mailto:AndromedaPlumbingAndHeating@gmail.com">AndromedaPlumbingAndHeating@gmail.com</a></li>
-          <li><strong>Service Area:</strong> Edmonton &amp; surrounding communities</li>
-          <li><strong>Availability:</strong> 24/7 emergency service</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <strong>Andromeda Plumbing &amp; Heating</strong>
-    <span>Serving Edmonton and surrounding communities.</span>
-    <span>&copy; 2025 Andromeda Plumbing &amp; Heating • Edmonton, Alberta</span>
-  </div>
-</footer>
-
-<script>
-(function() {
-  const body = document.body;
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('themeMode');
-
-  if (saved === 'light') {
-    body.classList.remove('dark-mode');
-  } else {
-    body.classList.add('dark-mode');
-  }
-
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
-    });
-  }
-})();
-</script>
-
+  </footer>
 </body>
 </html>
