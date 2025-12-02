@@ -304,4 +304,30 @@ header {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 0.7rem;
+
+
+/* ----- LOGO ----- */
+.logo-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-logo {
+    width: 340px;      /* Bigger logo */
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Make the hero section cleaner without the text block */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+}
+
+   
 }
