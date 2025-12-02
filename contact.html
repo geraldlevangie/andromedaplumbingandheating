@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Andromeda Plumbing & Heating</title>
-    <link rel="stylesheet" href="style.css?v=2" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Andromeda Plumbing & Heating</title>
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
-
 <body class="dark-mode">
-<header>
-    <div class="nav-left">
-        <img src="assets/AndromedaLogo1.png" alt="Andromeda Logo" />
-        <div class="brand-text">
-            <span>ANDROMEDA</span>
-            <span>PLUMBING & HEATING</span>
-        </div>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <nav class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="logo-center">
+      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" />
+      <div class="brand-text">
+        <span>ANDROMEDA</span>
+        <span>PLUMBING &amp; HEATING</span>
+      </div>
     </div>
 
-    <div class="nav-center">
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html" class="active">Contact</a>
-        </nav>
-
-        <div class="toggle-wrapper">
-            <span class="toggle-label">Light / Dark</span>
-            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
-        </div>
+    <div class="header-right">
+      <div class="header-phone">
+        <a href="tel:7808879775">780-887-9775</a>
+        <span>Edmonton & Area • 24/7</span>
+      </div>
+      <div class="toggle-wrapper">
+        <span>Light / Dark</span>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+      </div>
     </div>
 
-    <div class="nav-contact">
-        <span class="nav-phone"><a href="tel:7808879775">780-887-9775</a></span>
-        <span class="call-text">Edmonton, AB</span>
-    </div>
+  </div>
 </header>
 
 <main>
-    <section class="page-section">
+  <section class="page-section">
+    <div class="container">
+      <div class="content">
         <p>For service calls, quotes, or general questions:</p>
 
-        <ul class="list-check" style="margin-top:18px;">
-            <li><strong>Phone:</strong> <a href="tel:7808879775">780-887-9775</a></li>
-            <li><strong>Email:</strong> <a href="mailto:andromedaplumbingandheating@gmail.com">andromedaplumbingandheating@gmail.com</a></li>
-            <li><strong>Service Area:</strong> Edmonton & surrounding communities</li>
-            <li><strong>Availability:</strong> 24/7 Emergency Service</li>
+        <ul class="list-check">
+          <li><strong>Phone:</strong> <a href="tel:7808879775">780-887-9775</a></li>
+          <li><strong>Email:</strong> <a href="mailto:AndromedaPlumbingAndHeating@gmail.com">AndromedaPlumbingAndHeating@gmail.com</a></li>
+          <li><strong>Service Area:</strong> Edmonton &amp; surrounding communities</li>
+          <li><strong>Availability:</strong> 24/7 emergency service</li>
         </ul>
-    </section>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
-    <div><strong>Andromeda Plumbing & Heating</strong></div>
-    <div>&copy; 2025 Andromeda Plumbing & Heating — Edmonton, Alberta</div>
-    <div><a href="mailto:andromedaplumbingandheating@gmail.com">andromedaplumbingandheating@gmail.com</a></div>
+  <div class="container footer-inner">
+    <strong>Andromeda Plumbing &amp; Heating</strong>
+    <span>Serving Edmonton and surrounding communities.</span>
+    <span>&copy; 2025 Andromeda Plumbing &amp; Heating • Edmonton, Alberta</span>
+  </div>
 </footer>
 
 <script>
 (function() {
-    const body = document.body;
-    const toggle = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('theme');
+  const body = document.body;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('themeMode');
 
-    if (saved === 'light') {
-        body.classList.remove('dark-mode');
-    } else {
-        body.classList.add('dark-mode');
-    }
+  if (saved === 'light') {
+    body.classList.remove('dark-mode');
+  } else {
+    body.classList.add('dark-mode');
+  }
 
-    if (toggle) {
-        toggle.addEventListener('click', () => {
-            const isDark = body.classList.toggle('dark-mode');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-    }
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+    });
+  }
 })();
 </script>
 
