@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +9,11 @@
 </head>
 
 <body>
-    <!-- NAVIGATION BAR -->
-    <header class="navbar">
+
+    <!-- HEADER -->
+    <header class="header">
         <div class="nav-left">
-            <img src="assets/AndromedaLogo1.png" class="nav-logo" alt="Andromeda Logo">
+            <img class="small-logo" src="assets/AndromedaLogo1.png" alt="Andromeda Logo">
             <div class="brand-text">
                 <span>ANDROMEDA</span>
                 <span>PLUMBING & HEATING</span>
@@ -19,82 +21,71 @@
         </div>
 
         <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
+            <a class="active" href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
         </nav>
 
-        <div class="nav-right">
+        <div class="nav-contact">
             <span class="nav-phone">780-887-9775</span>
             <a href="tel:7808879775" class="nav-cta">Call Now</a>
-
-            <!-- DARK MODE TOGGLE -->
-            <label class="toggle">
-                <input type="checkbox" id="modeToggle">
-                <span class="slider"></span>
-            </label>
         </div>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <img src="assets/AndromedaLogo1.png" class="hero-logo" alt="Andromeda Logo">
+        <div class="hero-center">
+            <img src="assets/AndromedaLogo1.png" alt="Andromeda Logo" class="hero-logo">
 
-        <p class="service-note">
-            24/7 Emergency Service — Licensed & Insured — Serving Edmonton, AB
-        </p>
+            <p class="service-note">
+                24/7 Emergency Service — Licensed & Insured — Serving Edmonton, AB
+            </p>
 
-        <div class="call-buttons">
-            <a href="tel:7808879775" class="call-now">Call Now</a>
-            <a href="contact.html" class="quote">Get a Quote</a>
+            <div class="call-buttons">
+                <a href="tel:7808879775" class="call-now">Call Now</a>
+                <a href="contact.html" class="quote">Get a Quote</a>
+            </div>
         </div>
 
-        <div class="emergency-box">
-            <h3>Emergency Services</h3>
-            <ul>
-                <li>Burst Pipes</li>
-                <li>Frozen Lines</li>
-                <li>No Heat</li>
-                <li>Flooding</li>
-            </ul>
-            <p>Call 780-887-9775 for fast response.</p>
-            <span class="location-tag">Edmonton, AB</span>
+        <div class="hero-right">
+            <div class="emergency-box">
+                <h3>Emergency Services</h3>
+                <ul>
+                    <li>Burst Pipes</li>
+                    <li>Frozen Lines</li>
+                    <li>No Heat</li>
+                    <li>Flooding</li>
+                </ul>
+                <p class="emergency-call">Call 780-887-9775 for fast response.</p>
+                <span class="location-tag">Edmonton, AB</span>
+            </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+    <!-- SERVICES -->
     <section class="services">
         <h2>Professional Plumbing & Heating</h2>
         <p>Honest work. Clean installations. Code-compliant repairs.</p>
 
         <div class="service-grid">
-
             <div class="service-card">
                 <h4>Leaks, Clogs & Fixes</h4>
-                <p>Faucets, blocked drains, toilets, pressure issues, and more.</p>
+                <p>Dripping faucets, blocked drains, running toilets, water pressure issues, and more.</p>
             </div>
 
             <div class="service-card">
                 <h4>Furnace & Heating Systems</h4>
-                <p>Repairs, diagnostics, and installs for all heating systems.</p>
+                <p>Repairs, diagnostics, and installs for home heating systems.</p>
             </div>
 
             <div class="service-card">
                 <h4>Hot Water Tanks</h4>
                 <p>Emergency replacements and upgrades for all tank sizes.</p>
             </div>
-
         </div>
     </section>
 
-    <!-- DARK MODE SCRIPT -->
-    <script>
-        const toggle = document.getElementById("modeToggle");
-        toggle.addEventListener("change", () => {
-            document.body.classList.toggle("dark");
-        });
-    </script>
-
 </body>
+
 </html>
