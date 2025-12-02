@@ -197,4 +197,23 @@ body.dark .nav-links a {
 body.dark .service-card {
     background: #1a1a1a;
     border-color: #333;
+
+    /* HERO LOGO FIX */
+.hero-center {
+    text-align: center;
+    width: 100%;
+}
+
+.hero-logo {
+    width: 360px;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto 10px auto;
+}
+
+.small-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
 }
