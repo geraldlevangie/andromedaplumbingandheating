@@ -433,4 +433,29 @@ body:not(.dark-mode) .site-footer {
   body {
     padding-top: 110px;
   }
+   /* CONTACT PAGE FIXES */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.btn-primary {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: var(--accent, #0b6623);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #0e7a2a;
+}
+
 }
