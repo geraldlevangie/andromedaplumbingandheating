@@ -9,11 +9,9 @@
 
 <body class="dark-mode">
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
-    <!-- LEFT NAV -->
     <nav class="nav-left">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
@@ -21,60 +19,52 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- RIGHT PHONE ONLY -->
-    <div class="header-right header-phone-only">
-      <a href="tel:7808879775" class="header-phone-number">780-887-9775</a>
+    <div class="header-right">
+      <div class="header-phone">
+        <a href="tel:7808879775">780-887-9775</a>
+        <span>Edmonton &amp; Area • 24/7</span>
+      </div>
+
+      <div class="toggle-wrapper">
+        <span>Light / Dark</span>
+        <button id="themeToggle" class="theme-toggle"></button>
+      </div>
     </div>
 
   </div>
 </header>
 
-
-<!-- ================= MAIN CONTENT ================= -->
 <main>
 
   <section class="page-hero">
     <div class="container">
       <h1>About Andromeda Plumbing & Heating</h1>
-      <p>
-        Andromeda Plumbing & Heating provides honest, professional plumbing and heating service
-        for homeowners and small businesses in Edmonton and the surrounding area.
-      </p>
+      <p>Providing reliable plumbing and heating services throughout Edmonton and area.</p>
     </div>
   </section>
 
   <section class="page-section">
-    <div class="container">
-      <div class="page-content">
+    <div class="container page-content">
 
-        <p>
-          Every job is approached with careful planning, clean workmanship, and respect for your home or workplace.
-          Whether it’s an emergency late-night call or a planned upgrade, the focus is on doing the work properly —
-          not rushing through a quick patch.
-        </p>
+      <p>
+        Andromeda Plumbing & Heating is committed to clean, professional workmanship. 
+        Every repair, installation, and diagnostic is done with care and respect for your home.
+      </p>
 
-        <p>
-          From common repairs and fixture replacements to furnace issues and hot water tank installs,
-          the goal is to provide reliable solutions that last.
-        </p>
+      <h2>What You Can Expect</h2>
 
-        <h2>What You Can Expect</h2>
+      <ul class="list-check">
+        <li>Clear explanations and honest recommendations.</li>
+        <li>Fair, upfront pricing with no hidden fees.</li>
+        <li>Work completed to Alberta plumbing and heating codes.</li>
+        <li>Respectful service from start to finish.</li>
+      </ul>
 
-        <ul class="list-check">
-          <li>Clear explanations of what needs to be done and why.</li>
-          <li>Fair, upfront pricing with no surprise add-ons.</li>
-          <li>Work that meets or exceeds local plumbing and heating codes.</li>
-          <li>Respectful service from the first call to the final cleanup.</li>
-        </ul>
-
-      </div>
     </div>
   </section>
 
 </main>
 
-
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>© 2025 Andromeda Plumbing & Heating</div>
@@ -82,18 +72,21 @@
   </div>
 </footer>
 
-
-<!-- DARK MODE SCRIPT -->
 <script>
-(function() {
+(function(){
   const body = document.body;
+  const btn = document.getElementById("themeToggle");
   const saved = localStorage.getItem("themeMode");
 
-  if (saved === "dark" || !saved) {
-    body.classList.add("dark-mode");
-  } else {
-    body.classList.remove("dark-mode");
-  }
+  if (saved === "light") body.classList.remove("dark-mode");
+  if (body.classList.contains("dark-mode")) btn.classList.add("is-dark");
+
+  btn.addEventListener("click", ()=>{
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    btn.classList.toggle("is-dark", isDark);
+    localStorage.setItem("themeMode", isDark ? "dark" : "light");
+  });
 })();
 </script>
 
