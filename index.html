@@ -2,53 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Andromeda Plumbing &amp; Heating | Edmonton, AB</title>
+  <title>Andromeda Plumbing & Heating | Edmonton, AB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
+
 <body class="dark-mode">
+
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
-    <div class="header-left">
-      <div class="header-logo">
-        <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating logo" />
-      </div>
-      <div class="brand-text">
-        <span>ANDROMEDA</span>
-        <span>PLUMBING &amp; HEATING</span>
-      </div>
-    </div>
-
-    <nav class="nav-links">
+    <nav class="nav-left">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
 
+    <div class="logo-center">
+      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" class="header-logo">
+      <div class="brand-text">
+        <span>ANDROMEDA</span>
+        <span>PLUMBING & HEATING</span>
+      </div>
+    </div>
+
     <div class="header-right">
       <div class="header-phone">
         <a href="tel:7808879775">780-887-9775</a>
-        <span>Edmonton &amp; Area • 24/7</span>
+        <span>Edmonton & Area • 24/7</span>
       </div>
+
       <div class="toggle-wrapper">
         <span>Light / Dark</span>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+        <button id="themeToggle" class="theme-toggle"></button>
       </div>
     </div>
 
   </div>
 </header>
 
+
+<!-- ================= MAIN CONTENT ================= -->
 <main>
+
   <section class="hero">
     <div class="container hero-inner">
-      <div class="hero-main">
-        <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating logo" class="hero-logo" />
 
-        <div class="hero-kicker">Plumbing &amp; Heating • Edmonton, Alberta</div>
-        <h1 class="hero-title">Professional Plumbing &amp; Heating Services</h1>
+      <div class="hero-main">
+        <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating logo" class="hero-logo">
+
+        <div class="hero-kicker">Plumbing & Heating • Edmonton, Alberta</div>
+        <h1 class="hero-title">Professional Plumbing & Heating Services</h1>
+
         <p class="hero-subtitle">
           Fast, reliable service for leaks, clogs, frozen lines, no-heat calls, hot water tanks and full system installs.
           Clean work and honest communication from start to finish.
@@ -60,7 +67,7 @@
         </div>
 
         <div class="hero-meta">
-          Licensed &amp; insured • Serving Edmonton &amp; surrounding communities
+          Licensed & insured • Serving Edmonton & surrounding communities
         </div>
       </div>
 
@@ -80,19 +87,22 @@
           </div>
         </aside>
       </div>
+
     </div>
   </section>
 
   <section id="services" class="section alt">
     <div class="container">
+
       <header class="section-header">
-        <h2>Professional Plumbing &amp; Heating</h2>
+        <h2>Professional Plumbing & Heating</h2>
         <p>Clean installations, careful diagnostics, and repairs that meet local code.</p>
       </header>
 
       <div class="services-grid">
+
         <article class="service-card">
-          <h3>Leaks, Clogs &amp; Fixes</h3>
+          <h3>Leaks, Clogs & Fixes</h3>
           <p>
             Dripping faucets, blocked drains, running toilets, water pressure issues, and other common
             plumbing problems fixed quickly and neatly.
@@ -100,7 +110,7 @@
         </article>
 
         <article class="service-card">
-          <h3>Heating &amp; No-Heat Calls</h3>
+          <h3>Heating & No-Heat Calls</h3>
           <p>
             Diagnostics and repairs for furnaces and heating systems so your home stays warm and safe
             through the winter.
@@ -114,17 +124,22 @@
             or small business.
           </p>
         </article>
+
       </div>
+
     </div>
   </section>
 
+
   <section class="section">
     <div class="container columns">
+
       <div>
         <div class="section-header" style="text-align:left; margin-bottom:1rem;">
           <h2>Why Choose Andromeda</h2>
           <p>Professional service with a focus on clean, reliable work.</p>
         </div>
+
         <ul class="list-check">
           <li>Clear explanations and honest recommendations.</li>
           <li>Fair pricing with no surprise add-ons.</li>
@@ -138,6 +153,7 @@
           <h2>Service Area</h2>
           <p>Plumbing and heating service for Edmonton and surrounding communities.</p>
         </div>
+
         <ul class="list-check">
           <li>Residential homes and condos.</li>
           <li>Small commercial spaces and shops.</li>
@@ -145,37 +161,42 @@
           <li>New fixture installs and replacements.</li>
         </ul>
       </div>
+
     </div>
   </section>
+
 </main>
 
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>© 2025 Andromeda Plumbing &amp; Heating</div>
+    <div>© 2025 Andromeda Plumbing & Heating</div>
     <div>Edmonton, Alberta • 24/7 emergency service</div>
   </div>
 </footer>
 
+
+<!-- ================= THEME TOGGLE SCRIPT ================= -->
 <script>
 (function() {
   const body = document.body;
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('themeMode');
 
-  if (saved === 'light') {
-    body.classList.remove('dark-mode');
-  } else {
+  if (saved === 'dark' || !saved) {
     body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
   }
 
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
-    });
-  }
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+  });
 })();
 </script>
+
 </body>
 </html>
