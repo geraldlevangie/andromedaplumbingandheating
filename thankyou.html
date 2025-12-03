@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Message Sent | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 
 <body class="dark-mode">
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
@@ -20,10 +21,10 @@
     </nav>
 
     <div class="logo-center">
-      <img src="assets/AndromedaLogo1.png">
+      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" class="header-logo">
       <div class="brand-text">
         <span>ANDROMEDA</span>
-        <span>PLUMBING &amp; HEATING</span>
+        <span>PLUMBING & HEATING</span>
       </div>
     </div>
 
@@ -32,11 +33,18 @@
         <a href="tel:7808879775">780-887-9775</a>
         <span>Edmonton & Area • 24/7</span>
       </div>
+
+      <div class="toggle-wrapper">
+        <span>Light / Dark</span>
+        <button id="themeToggle" class="theme-toggle"></button>
+      </div>
     </div>
 
   </div>
 </header>
 
+
+<!-- ================= MAIN CONTENT ================= -->
 <main>
 <section class="section">
   <div class="container" style="text-align:center;">
@@ -48,6 +56,38 @@
   </div>
 </section>
 </main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <strong>Andromeda Plumbing & Heating</strong>
+    <span>Serving Edmonton and surrounding communities.</span>
+    <span>&copy; 2025 Andromeda Plumbing & Heating</span>
+  </div>
+</footer>
+
+
+<!-- ================= THEME TOGGLE SCRIPT ================= -->
+<script>
+(function() {
+  const body = document.body;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('themeMode');
+
+  if (saved === 'dark' || !saved) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+  });
+})();
+</script>
 
 </body>
 </html>
