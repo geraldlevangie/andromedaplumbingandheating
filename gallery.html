@@ -9,7 +9,6 @@
 
 <body class="dark-mode">
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
@@ -23,8 +22,15 @@
     <div class="header-right">
       <div class="header-phone">
         <a href="tel:7808879775">780-887-9775</a>
-        <span>Edmonton &amp; Area • 24/7</span>
+        <span>Edmonton & Area • 24/7</span>
       </div>
+
+      <a href="https://g.page/r/CZ3j4bZykgAtEBM/review"
+         target="_blank"
+         rel="noopener"
+         class="btn-cta header-rate-btn">
+        ⭐ Rate Us on Google
+      </a>
 
       <div class="toggle-wrapper">
         <span>Light / Dark</span>
@@ -35,8 +41,6 @@
   </div>
 </header>
 
-
-<!-- ================= MAIN CONTENT ================= -->
 <main>
 
   <section class="page-hero">
@@ -49,7 +53,6 @@
   <section class="page-section">
     <div class="container modern-gallery">
 
-      <!-- Boiler Hydronic Heating -->
       <div class="gallery-card">
         <img src="assets/IMG_0325.JPG" alt="Boiler and hydronic heating installation" />
         <div class="gallery-info">
@@ -58,7 +61,6 @@
         </div>
       </div>
 
-      <!-- Laundry Sink Install -->
       <div class="gallery-card">
         <img src="assets/IMG_0460.JPG" alt="Laundry sink installation" />
         <div class="gallery-info">
@@ -67,18 +69,16 @@
         </div>
       </div>
 
-      <!-- Shower Install (FIXED: 0466 was 0465 before) -->
       <div class="gallery-card">
-        <img src="assets/IMG_0466.JPG" alt="Shower installation and fixture rough-in" />
+        <img src="assets/IMG_0466.JPG" alt="Shower rough-in" />
         <div class="gallery-info">
           <h3>Shower Installation</h3>
           <p>Updated shower system install with precise valve placement and clean rough-in work.</p>
         </div>
       </div>
 
-      <!-- Bathtub Install -->
       <div class="gallery-card">
-        <img src="assets/IMG_0494.JPG" alt="Bathtub installation with new drain and fixtures" />
+        <img src="assets/IMG_0494.JPG" alt="Bathtub installation" />
         <div class="gallery-info">
           <h3>Bathtub Installation</h3>
           <p>New bathtub set with drain assembly, overflow, and secure fixture installation to code.</p>
@@ -90,8 +90,6 @@
 
 </main>
 
-
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>© 2025 Andromeda Plumbing & Heating</div>
@@ -99,29 +97,20 @@
   </div>
 </footer>
 
-
-<!-- THEME SCRIPT -->
 <script>
-(function() {
+(function(){
   const body = document.body;
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('themeMode');
+  const btn = document.getElementById("themeToggle");
+  const saved = localStorage.getItem("themeMode");
 
-  if (saved === 'light') {
-    body.classList.remove('dark-mode');
-  } else {
-    body.classList.add('dark-mode');
-  }
+  if (saved === "light") body.classList.remove("dark-mode");
+  if (body.classList.contains("dark-mode")) btn.classList.add("is-dark");
 
-  if (body.classList.contains('dark-mode')) {
-    toggle.classList.add('is-dark');
-  }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    toggle.classList.toggle('is-dark', isDark);
-    localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+  btn.addEventListener("click", ()=>{
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    btn.classList.toggle("is-dark", isDark);
+    localStorage.setItem("themeMode", isDark ? "dark" : "light");
   });
 })();
 </script>
