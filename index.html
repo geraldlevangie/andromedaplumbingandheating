@@ -26,6 +26,13 @@
         <span>Edmonton &amp; Area • 24/7</span>
       </div>
 
+      <a href="https://share.google/O4AEZrgTuiaqgpemn"
+         target="_blank"
+         rel="noopener"
+         class="btn-cta header-rate-btn">
+        ⭐ Rate Us on Google
+      </a>
+
       <div class="toggle-wrapper">
         <span>Light / Dark</span>
         <button id="themeToggle" class="theme-toggle"></button>
@@ -65,7 +72,6 @@
 
         <div class="hero-cta-row">
           <a href="tel:7808879775" class="btn-primary hero-cta-main">Call 780-887-9775</a>
-          <a href="#services" class="btn-secondary hero-cta-secondary">View Services</a>
         </div>
       </div>
 
@@ -81,15 +87,8 @@
         <a href="tel:7808879775" class="hero-card-call">Call Now</a>
       </aside>
 
-<div class="rate-us-wrap">
-  <a href="https://share.google/O4AEZrgTuiaqgpemn" 
-     target="_blank" 
-     rel="noopener" 
-     class="btn-cta">
-     ⭐ Rate Us on Google
-  </a>
-</div>
-
+    </div>
+  </section>
 
   <!-- SERVICES SECTION -->
   <section id="services" class="section home-services">
@@ -131,7 +130,6 @@
     </div>
   </section>
 
-
   <!-- FEATURED PROJECTS TEASER -->
   <section class="section home-gallery-preview">
     <div class="container">
@@ -142,4 +140,86 @@
       </header>
 
       <div class="home-gallery-grid">
-        <div class="home-gallery-ite
+        <div class="home-gallery-item">
+          <img src="assets/IMG_0325.JPG" alt="Boiler and hydronic heating installation" />
+          <h3>Boiler &amp; Hydronic Heating</h3>
+        </div>
+
+        <div class="home-gallery-item">
+          <img src="assets/IMG_0460.JPG" alt="Laundry sink installation" />
+          <h3>Laundry Sink Installation</h3>
+        </div>
+
+        <div class="home-gallery-item">
+          <img src="assets/IMG_0494.JPG" alt="Bathtub installation with new drain and fixtures" />
+          <h3>Bathtub Installation</h3>
+        </div>
+      </div>
+
+      <div class="home-gallery-link">
+        <a href="gallery.html">View full gallery &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY + SERVICE AREA -->
+  <section class="section">
+    <div class="container home-why-inner">
+
+      <div>
+        <header class="section-header">
+          <h2>Why Choose Andromeda Plumbing &amp; Heating</h2>
+        </header>
+        <ul class="list-check">
+          <li>Clean, professional workmanship on every job.</li>
+          <li>Clear communication and honest recommendations.</li>
+          <li>Work performed to Alberta plumbing and heating codes.</li>
+          <li>Respect for your home, from arrival to cleanup.</li>
+        </ul>
+      </div>
+
+      <aside class="home-service-area">
+        <h3>Service Area</h3>
+        <p>Based in Edmonton and serving surrounding communities.</p>
+        <ul>
+          <li>Edmonton</li>
+          <li>St. Albert</li>
+          <li>Sherwood Park</li>
+          <li>Spruce Grove &amp; Stony Plain</li>
+          <li>Nearby rural properties</li>
+        </ul>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© 2025 Andromeda Plumbing &amp; Heating</div>
+    <div>Edmonton, Alberta • 24/7 emergency service</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const body = document.body;
+  const btn = document.getElementById("themeToggle");
+  const saved = localStorage.getItem("themeMode");
+
+  if (saved === "light") body.classList.remove("dark-mode");
+  if (body.classList.contains("dark-mode")) btn.classList.add("is-dark");
+
+  btn.addEventListener("click", ()=>{
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    btn.classList.toggle("is-dark", isDark);
+    localStorage.setItem("themeMode", isDark ? "dark" : "light");
+  });
+})();
+</script>
+
+</body>
+</html>
