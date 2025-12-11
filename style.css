@@ -772,5 +772,34 @@ body:not(.dark-mode) .rate-us-btn {
 .rate-us-btn:hover {
   background: var(--accent-soft);
 }
+/* Unified CTA Button Style */
+.btn-cta {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  background: var(--accent);
+  color: #fff;
+  transition: 0.2s ease;
+  border: none;
+  text-align: center;
+}
+
+.btn-cta:hover {
+  background: var(--accent-soft);
+  transform: scale(1.03);
+}
+
+body:not(.dark-mode) .btn-cta {
+  background: var(--accent);
+  color: #fff;
+}
+
+.rate-us-wrap {
+  text-align: center;
+  margin: 2rem 0;
+}
 
 
